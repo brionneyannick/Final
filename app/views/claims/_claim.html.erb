@@ -1,0 +1,8 @@
+<div class="well well-sm" id="<%= @claim.id %>">
+  <strong><%= @claim.description %></strong>
+  <br>
+  <div class="text-right">
+    <%= link_to 'Editar', edit_company_claim_path(@company, @claim), data: { remote: true }, class: 'btn btn-xs btn-success' %>
+    <%= link_to 'Eliminar', company_claim_path(@company, @claim), method: :delete, data: { confirm: 'Estás seguro que deseas eliminar la compañia?', remote: true }, class: 'btn btn-xs btn-danger' %>
+  </div>
+</div>
